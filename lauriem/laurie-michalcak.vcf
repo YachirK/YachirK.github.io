@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:MICHALCAK;Laurie;;;
+FN:Laurie MICHALCAK
+ORG:Presta'Conseil
+TITLE:Conseillère immobilière
+TEL;TYPE=CELL,VOICE:+33749941678
+TEL;TYPE=WORK,VOICE:+33978802100
+EMAIL;TYPE=INTERNET,WORK:prestaconseil.immo@gmail.com
+ADR;TYPE=WORK:;;151 rue de la République;Caudebec-lès-Elbeuf;;76320;France
+URL:https://www.presta-conseil.com/
+NOTE:Agence immobilière Presta'Conseil - Vente\, location\, gestion\, estimation
+END:VCARD

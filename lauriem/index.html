@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Laurie MICHALCAK · Presta'Conseil</title>
+<meta name="description" content="Laurie MICHALCAK, conseillère immobilière chez Presta'Conseil à Caudebec-lès-Elbeuf. Appelez, écrivez ou découvrez nos biens.">
+<meta property="og:title" content="Laurie MICHALCAK · Presta'Conseil">
+<meta property="og:description" content="Conseillère immobilière · Votre projet, notre priorité">
+<meta property="og:type" content="profile">
+<meta name="theme-color" content="#f8f2e8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23b8893a'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' fill='%23fff' text-anchor='middle'%3ELM%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #f8f2e8;
+    --card: #fffcf7;
+    --ink: #141414;
+    --muted: #6f6659;
+    --line: #ece2d1;
+    --gold-1: #b8893a;
+    --gold-2: #dcb966;
+    --gold-3: #a77a2c;
+    --gold: linear-gradient(135deg, var(--gold-2) 0%, var(--gold-1) 55%, var(--gold-3) 100%);
+    --shadow: 0 1px 2px rgba(80, 60, 20, .05), 0 18px 50px -18px rgba(80, 60, 20, .28);
+    --serif: "Didot", "Bodoni MT", "Iowan Old Style", "Palatino Linotype", Georgia, "Noto Serif", serif;
+    --script: "Snell Roundhand", "Segoe Script", "Apple Chancery", "Dancing Script", cursive;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+      radial-gradient(120% 60% at 100% 0%, #f1e3c8 0%, rgba(241, 227, 200, 0) 60%),
+      var(--bg);
+    color: var(--ink);
+    font: 16px/1.5 var(--sans);
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    padding: max(20px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom));
+  }
+  main { width: 100%; max-width: 440px; }
+
+  .card {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 26px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  /* Fine bordure dorée en haut, comme l'arc de la carte de visite */
+  .card::before {
+    content: "";
+    position: absolute; left: 0; right: 0; top: 0;
+    height: 4px;
+    background: var(--gold);
+  }
+  .leaf {
+    position: absolute;
+    top: 18px; right: 14px;
+    width: 92px; height: 92px;
+    color: var(--gold-1);
+    opacity: .55;
+    pointer-events: none;
+  }
+
+  /* En-tête */
+  .head { padding: 34px 28px 24px; text-align: center; }
+  .logo { display: block; width: 188px; max-width: 62%; height: auto; margin: 0 auto; }
+  .motto {
+    margin: 14px 0 0;
+    font: 22px/1.2 var(--script);
+    color: var(--ink);
+  }
+  .sep {
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+    margin: 24px auto 18px;
+    color: var(--gold-1);
+  }
+  .sep::before, .sep::after {
+    content: "";
+    width: 64px; height: 1px;
+    background: linear-gradient(90deg, rgba(184, 137, 58, 0), var(--gold-1));
+  }
+  .sep::after { transform: scaleX(-1); }
+  .sep svg { display: block; }
+
+  h1 { margin: 0; font-weight: 400; }
+  .first {
+    display: block;
+    font: 50px/1 var(--script);
+    background: var(--gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: var(--gold-1);
+    -webkit-text-fill-color: transparent;
+    padding: 0 6px;
+  }
+  .last {
+    display: block;
+    margin-top: 2px;
+    font: 600 34px/1.1 var(--serif);
+    letter-spacing: .04em;
+    color: var(--ink);
+  }
+  .role {
+    margin: 14px 0 0;
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .role::before {
+    content: "";
+    display: block;
+    width: 44px; height: 1px;
+    margin: 0 auto 12px;
+    background: var(--gold-1);
+  }
+
+  /* Bouton principal */
+  .primary-wrap { padding: 0 20px 4px; }
+  .primary {
+    display: flex; align-items: center; gap: 14px;
+    width: 100%;
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: var(--ink);
+    color: #fff;
+    text-decoration: none;
+    box-shadow: inset 0 0 0 1px rgba(220, 185, 102, .35);
+    transition: transform .15s ease, opacity .15s ease;
+  }
+  .primary:hover { opacity: .92; }
+  .primary:active { transform: scale(.985); }
+  .primary .txt { flex: 1; text-align: left; }
+  .primary strong { display: block; font-size: 17px; font-weight: 650; }
+  .primary .txt span { display: block; font-size: 13px; color: var(--gold-2); }
+  .primary svg { flex: none; }
+  .primary .house { color: var(--gold-2); }
+
+  /* Lignes d'actions */
+  .actions { list-style: none; margin: 14px 0 0; padding: 0 8px; }
+  .actions li + li { border-top: 1px solid var(--line); }
+  .row {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 12px;
+    border-radius: 14px;
+    color: inherit;
+    text-decoration: none;
+    transition: background .15s ease;
+  }
+  .row:hover { background: #f8f0e2; }
+  .ico {
+    flex: none;
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 14px -6px rgba(167, 122, 44, .7);
+  }
+  .ico svg { display: block; }
+  .row .txt { flex: 1; min-width: 0; }
+  .row .txt strong { display: block; font-size: 16px; font-weight: 600; }
+  .row .txt span { display: block; font-size: 14px; color: var(--muted); overflow-wrap: anywhere; }
+  .chev { flex: none; color: var(--gold-1); }
+
+  /* Adresse */
+  .place {
+    margin: 8px 20px 0;
+    padding: 18px 0 22px;
+    border-top: 1px solid var(--line);
+    display: flex; align-items: center; gap: 14px;
+  }
+  .place address { font-style: normal; flex: 1; font-size: 14.5px; }
+  .place address b { font-weight: 600; }
+  .place a {
+    flex: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gold-3);
+    text-decoration: none;
+    padding: 9px 14px;
+    border: 1px solid var(--gold-1);
+    border-radius: 999px;
+  }
+  .place a:hover { background: var(--gold-1); color: #fff; }
+
+  .services {
+    padding: 14px 20px 18px;
+    background: #f6eedf;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* Mentions légales */
+  footer { margin-top: 22px; padding: 0 6px; color: var(--muted); font-size: 11.5px; line-height: 1.6; }
+  footer details summary {
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    list-style: none;
+  }
+  footer details summary::-webkit-details-marker { display: none; }
+  footer details summary::after { content: " +"; }
+  footer details[open] summary::after { content: " –"; }
+  footer .legal { margin-top: 12px; }
+  footer .legal p { margin: 0 0 8px; }
+  footer a { color: inherit; }
+  .copy { text-align: center; margin-top: 16px; }
+
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--gold-1); outline-offset: 3px; }
+
+  /* Apparition douce */
+  @media (prefers-reduced-motion: no-preference) {
+    .head, .primary-wrap, .actions, .place, .services, footer { animation: rise .6s cubic-bezier(.2, .7, .2, 1) both; }
+    .primary-wrap { animation-delay: .1s; }
+    .actions { animation-delay: .16s; }
+    .place { animation-delay: .22s; }
+    .services { animation-delay: .26s; }
+    footer { animation-delay: .32s; }
+    @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  }
+
+  @media (min-width: 700px) {
+    body { align-items: center; padding-top: 48px; padding-bottom: 48px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <article class="card">
+    <svg class="leaf" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" aria-hidden="true">
+      <path d="M8 92 C 40 70, 68 44, 94 6"/>
+      <path d="M30 76 C 22 62, 24 50, 34 42 C 40 54, 38 66, 30 76 Z"/>
+      <path d="M30 76 C 44 74, 54 80, 58 90 C 46 92, 36 86, 30 76 Z"/>
+      <path d="M52 56 C 46 42, 50 30, 60 24 C 64 38, 60 48, 52 56 Z"/>
+      <path d="M52 56 C 66 54, 76 60, 80 70 C 68 72, 58 66, 52 56 Z"/>
+      <path d="M72 32 C 70 20, 76 12, 84 8 C 86 20, 80 28, 72 32 Z"/>
+      <path d="M72 32 C 82 30, 90 34, 94 42 C 84 44, 76 40, 72 32 Z"/>
+    </svg>
+
+    <header class="head">
+      <img class="logo" src="logo-presta-conseil.png" width="376" height="218" alt="Presta'Conseil, Immobilier &amp; Conseil">
+      <p class="motto">Votre projet,<br>notre priorité</p>
+      <div class="sep" aria-hidden="true">
+        <svg width="22" height="20" viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M2 11 12 2l10 9"/><path d="M5 9v11h14V9"/><path d="M10.2 12.5h1.5v1.5h-1.5zM12.3 12.5h1.5v1.5h-1.5zM10.2 14.6h1.5v1.5h-1.5zM12.3 14.6h1.5v1.5h-1.5z" fill="currentColor" stroke="none"/></svg>
+      </div>
+      <h1><span class="first">Laurie</span><span class="last">MICHALCAK</span></h1>
+      <p class="role">Conseillère immobilière</p>
+    </header>
+
+    <div class="primary-wrap">
+      <a class="primary" href="https://www.presta-conseil.com/">
+        <svg class="house" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9v12h14V9"/><path d="M10 21v-6h4v6"/></svg>
+        <span class="txt"><strong>Découvrir nos biens</strong><span>presta-conseil.com</span></span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <ul class="actions">
+      <li>
+        <a class="row" href="tel:+33749941678">
+          <span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></span>
+          <span class="txt"><strong>M'appeler</strong><span>07 49 94 16 78</span></span>
+          <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        </a>
+      </li>
+      <li>
+        <a class="row" href="mailto:prestaconseil.immo@gmail.com?subject=Contact%20%E2%80%93%20Laurie%20MICHALCAK">
+          <span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <span class="txt"><strong>Nous écrire</strong><span>prestaconseil.immo@gmail.com</span></span>
+          <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        </a>
+      </li>
+      <li>
+        <a class="row" href="laurie-michalcak.vcf" download>
+          <span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0 1 14 0"/><path d="M19 8v6M16 11h6"/></svg></span>
+          <span class="txt"><strong>Enregistrer mon contact</strong><span>Ajouter à vos contacts</span></span>
+          <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        </a>
+      </li>
+      <li>
+        <a class="row" href="tel:+33978802100">
+          <span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/><path d="M16 9h2a2 2 0 0 1 2 2v10"/><path d="M2 21h20M8 7h4M8 11h4M8 15h4"/></svg></span>
+          <span class="txt"><strong>Appeler l'agence</strong><span>09 78 80 21 00</span></span>
+          <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        </a>
+      </li>
+    </ul>
+
+    <div class="place">
+      <span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
+      <address><b>Presta'Conseil</b><br>151 rue de la République<br>76320 Caudebec-lès-Elbeuf</address>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=151%20rue%20de%20la%20R%C3%A9publique%2076320%20Caudebec-l%C3%A8s-Elbeuf">Itinéraire</a>
+    </div>
+
+    <div class="services">Vente · Location · Gestion · Estimation</div>
+  </article>
+
+  <footer>
+    <details>
+      <summary>Mentions légales</summary>
+      <div class="legal">
+        <p><b>Éditeur :</b> Presta'Conseil, SARL au capital de 5 000 € · 151 rue de la République, 76320 Caudebec-lès-Elbeuf · 09 78 80 21 00 · prestaconseil.immo@gmail.com · RCS Rouen 898 738 018 · TVA FR29898738018.</p>
+        <p><b>Directeurs de publication :</b> Marilyne COUILLARD-AMICE et Maxime HAUTOT, représentants légaux.</p>
+        <p><b>Activité :</b> carte professionnelle Transaction, Gestion et Syndic n° CPI 7603 2021 000 000 003 délivrée par la CCI Rouen Métropole · Garantie financière : MARKEL INSURANCE SE, 92200 Neuilly-sur-Seine, montant 110 000 € · Médiateur de la consommation : MEDIMMOCONSO, <a href="https://medimmoconso.fr">medimmoconso.fr</a>.</p>
+        <p><b>Conseillère :</b> Laurie MICHALCAK, salariée, titulaire de l'attestation de collaborateur n° ADC 7603 2026 000 000 009 délivrée par la CCI Rouen Métropole.</p>
+        <p><b>Hébergeur :</b> GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>
+        <p>Cette page ne dépose aucun cookie et ne collecte aucune donnée personnelle. Mentions complètes et honoraires : <a href="https://www.presta-conseil.com/mentions-legales">presta-conseil.com/mentions-legales</a>.</p>
+      </div>
+    </details>
+    <p class="copy">© 2026 Presta'Conseil</p>
+  </footer>
+</main>
+</body>
+</html>
